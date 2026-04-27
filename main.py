@@ -83,12 +83,33 @@ def feature_time_magic():
         print("Evening is ideal for reflecting and relaxing.")
 # &end[FeatureE]
 
+# &begin[FeatureF]
+def feature_secret_code():
+    """FeatureF: Reveal a random secret code phrase based on mood."""
+    moods = [
+        "curious",
+        "adventurous",
+        "thoughtful",
+        "bold",
+    ]
+    codes = {
+        "curious": "Seek the hidden path.",
+        "adventurous": "Ride the lightning.",
+        "thoughtful": "Remember why you started.",
+        "bold": "Leap and build the wings later.",
+    }
+    mood = random.choice(moods)
+    print(f"Your mood is {mood}.")
+    print(f"Secret code phrase: {codes[mood]}")
+# &end[FeatureF]
+
 FEATURES = [
     ("FeatureA", feature_greeting),
     ("FeatureB", feature_number_fun),
     ("FeatureC", feature_story_prompt),
     ("FeatureD", feature_ascii_art),
     ("FeatureE", feature_time_magic),
+    ("FeatureF", feature_secret_code),
 ]
 
 
